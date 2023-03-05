@@ -42,7 +42,7 @@
 }
 
 .App {
-  display: grid;
+  display: grid-area;
   grid-template-areas: 
   "Hero"
   "Portfolio"
@@ -100,7 +100,48 @@
   align-items: end;
 }
 
+.App {
+  display: grid;
+  width: 700px;
+  min-height: 100vh;
+  grid-template-areas: 
+  "Header Header Header Header"
+  "Sidebar Main Main Main"
+  "Footer Footer Footer Footer";
+}
 
+.header {
+  grid-area: Header;
+  background-color: aquamarine;
+}
+.sidebar {
+  grid-area: Sidebar;
+  background-color: pink;
+}
+.main {
+  grid-area: Main;
+  background-color: bisque;
+}
+.footer {
+  grid-area: Footer;
+  background-color: orange;
+}
 
+.HeaderNav li {
+  list-style-type: none;
+  display: inline-block;
+  text-align: left;
+  padding-left: 10px;
+}
+.SideNav li {
+  list-style-type: none;
+  display: block;
+}
+.HeaderNav {
+  text-align: left;
+}
+.SideNav {
+  text-align: left;
+}
 
 
