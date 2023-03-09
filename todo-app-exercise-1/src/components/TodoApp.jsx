@@ -34,9 +34,8 @@ const TodoApp = () => {
     const handleClick = (e) => {
         e.target.classList.add("done");
     }
-    const listOfTasks = todos.map((todo) => (
-        todo.id%2 ? <Todo key={todo.id} todo={todo.task} handleClick={handleClick} className = 'odd'/>
-        : (<Todo key={todo.id} todo={todo.task} handleClick={handleClick} className = '' />)
+    const listOfTasks = todos.map((todo,index) => (
+         <Todo key={todo.id} todo={todo.task} handleClick={handleClick}  className = {(index+1)%2 ? 'odd': ''}/>
         ))
 
     return (
